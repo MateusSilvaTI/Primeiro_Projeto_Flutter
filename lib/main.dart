@@ -80,7 +80,9 @@ class _MyHomePageState extends State<MyHomePage> {
   final botaoSMS = IconButton(
     color: Colors.blue,
     icon: const Icon(Icons.sms),
-    onPressed: () {},
+    onPressed: () {
+      launchUrl(Uri(scheme: 'sms', path: '99999 - 9999'));
+    },
   );
 
   Widget build(BuildContext contexto) {
