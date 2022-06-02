@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -63,13 +64,17 @@ class _MyHomePageState extends State<MyHomePage> {
   final botaoTelefone = IconButton(
     color: Colors.blue,
     icon: const Icon(Icons.phone),
-    onPressed: () {},
+    onPressed: () {
+      launchUrl(Uri(scheme: 'tel', path: '99999 - 9999' ))
+    },
   );
 
   final botaoEmail = IconButton(
     color: Colors.blue,
     icon: const Icon(Icons.mail),
-    onPressed: () {},
+    onPressed: () {
+      launchUrl(Uri(scheme: 'mailto', path: 'exemplo@email.com'));
+    },
   );
 
   final botaoSMS = IconButton(
